@@ -1,0 +1,17 @@
+GCM Adobe Air Native Extension
+
+
+Jan 29, 2013	V1.0	>> beginning of the journey!
+
+Jun 24, 2013	V2.0	>> GCM message includes the following params: id, count, title, msg, info, type, imageUrl
+						>> there are 3 types of reactions, decided on the server, when a GCM message arrives: SimpleNotification (default) - BitmapNotification - SimpleDialog
+						>> when clicking on the notification, gcm data will be send to the invoke handeler of the app
+						>> minor bugs fixed
+
+Jul 11, 2013	V2.1	>> When packaging in captive mode, local db was not created by java which is now fixed and works fine. tested on Air SDK 3.6 and should be ok with 3.7 or 3.8 also
+
+Jan 18, 2014	V2.2	>> supports UTF-8 messages from server now also
+						>> supports "SimpleLink" gcm type also
+						
+----------------------------------------------------------------------------------------------
+Sep 13, 2015	V4.0	>> Built everything from the ground with the latest tools and libraries, supporting iOS+Android

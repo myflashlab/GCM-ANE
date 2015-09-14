@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/18.0">
+  <id>com.doitflash.gcm</id>
+  <versionNumber>4.0</versionNumber>
+  <supportedProfiles>mobileDevice</supportedProfiles>
+  <filename>gcm</filename>
+  <name>gcm</name>
+  <android>
+    <manifestAdditions>
+		<![CDATA[<manifest android:installLocation="auto">
+			
+			<!--
+			
+				IMPORTANT: change all "air.com.doitflash.gcm" to your own package name. (notice the air. at the beginning)
+				if your package name is "com.site.app" Android automatically adds air. to its beginning. so your Android package
+				name will be actually "air.com.site.app" but on the iOS, it is still "com.site.app" with no change
+			
+			-->
+		
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		
+		<!-- Required for gcm access -->
+		<uses-permission android:name="android.permission.INTERNET" />
+		<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+		<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+		<permission android:name="air.com.doitflash.gcm.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+		<uses-permission android:name="air.com.doitflash.gcm.permission.C2D_MESSAGE" />
+		
+		<!-- Required for waking up the device when gcm msg is arrived -->
+		<uses-permission android:name="android.permission.WAKE_LOCK" />
+		
+		<!-- if gcm tasks are set for future, you need this to make sure timers are all set even after user restarts their device -->
+		<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+		<uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+		
+		<!-- Required for gcm notification to access the vibrator -->
+		<uses-permission android:name="android.permission.VIBRATE" />
+		
+		
+		<application>
+			<activity>
+				<intent-filter>
+					<action android:name="android.intent.action.MAIN" />
+					<category android:name="android.intent.category.LAUNCHER" />
+				</intent-filter>
+				<intent-filter>
+					<action android:name="android.intent.action.VIEW" />
+					<category android:name="android.intent.category.BROWSABLE" />
+					<category android:name="android.intent.category.DEFAULT" />
+					<data android:scheme="air.com.doitflash.gcm" />
+				</intent-filter>
+			</activity>
+		
+			<!-- Register the required listeners to receive gcm when app is closed -->
+			<receiver android:name="com.doitflash.gcm.handler.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+				<intent-filter>
+					<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+					<category android:name="air.com.doitflash.gcm" />
+				</intent-filter>
+			</receiver>
+			<service android:name="com.doitflash.gcm.handler.GcmMessageHandler" />
+			<receiver android:name="com.doitflash.gcm.alarm.alarmTypes.Alarm_Notification" />
+			
+			<!-- if gcm tasks are set for future, you need this to make sure timers are all set even after user restarts their device -->
+			<receiver android:name="com.doitflash.gcm.alarm.RebootAutoStartAlarms">
+				<intent-filter>
+					<action android:name="android.intent.action.BOOT_COMPLETED" />
+				</intent-filter>
+			</receiver>
+			
+			<!-- Required for waking up the device when gcm notification arrives -->
+			<activity android:name="com.doitflash.gcm.alarm.WakeActivity" android:theme="@style/Theme.Transparent" />
+			
+		</application>
+</manifest>]]></manifestAdditions>
+  </android>
+  <iPhone>
+    <!--https://developer.apple.com/library/ios/documentation/general/reference/infoplistkeyreference/Articles/iPhoneOSKeys.html-->
+    <!--http://help.adobe.com/en_US/air/build/WSfffb011ac560372f7e64a7f12cd2dd1867-8000.html-->
+    <!-- A list of plist key/value pairs to be added to the application Info.plist -->
+    <InfoAdditions>
+	
+	<![CDATA[
+		<!-- iOS 6.1 is the minimum device requirement for gcm to work -->
+		<key>MinimumOSVersion</key>
+		<string>6.1</string>
+		
+		<key>UIStatusBarStyle</key>
+		<string>UIStatusBarStyleBlackOpaque</string>
+		
+		<key>UIRequiresPersistentWiFi</key>
+		<string>NO</string>
+		
+		<key>UIPrerenderedIcon</key>
+		<true />
+		
+		<key>UIDeviceFamily</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+		</array>
+		
+		<!-- Required for gcm ane -->
+		<key>UIBackgroundModes</key>
+		<array>
+			<string>fetch</string>
+			<string>remote-notification</string>
+		</array>
+		
+		<!-- introduce your gcm sender id for ios here (you will introduce it again in AS3 when initializing the extension) -->
+		<key>GCM_SENDER_ID</key>
+		<string>00000000000</string>
+		
+		<key>PLIST_VERSION</key>
+		<string>1</string>
+		
+		<!-- your iOS bundle id goes here too -->
+		<key>BUNDLE_ID</key>
+		<string>com.doitflash.gcm</string>
+		
+		<!-- Your are using gcm service, so set IS_GCM_ENABLED to true just like below -->
+		<key>IS_ADS_ENABLED</key>
+		<false/>
+		<key>IS_ANALYTICS_ENABLED</key>
+		<false/>
+		<key>IS_APPINVITE_ENABLED</key>
+		<false/>
+		<key>IS_GCM_ENABLED</key>
+		<true/>
+		<key>IS_SIGNIN_ENABLED</key>
+		<false/>
+	]]>
+		
+	</InfoAdditions>
+		
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+	
+	<Entitlements>
+	<![CDATA[
+	
+	<!--
+		You need to add all lines below just make sure to change two thing:
+		1) change all "com.doitflash.gcm" to your own iOS bundle ID
+		2) everywhere you see "M8DXV5X5LV" you need to enter your own provision ID instead. (HOW TO? go to your apple dev console where you are downloading your provisions from and click on edit a provision... there you will see a similar String. honestly, I don't have a clue what that is myself neither :D It's just apple's rules!
+	-->
+		
+		<key>keychain-access-groups</key>
+		<array>
+			<string>M8DXV5X5LV.*</string>		
+		</array>
+		<key>get-task-allow</key>
+		<true/>
+		<key>application-identifier</key>
+		<string>M8DXV5X5LV.com.doitflash.gcm</string>
+		<key>com.apple.developer.team-identifier</key>
+		<string>M8DXV5X5LV</string>
+		<key>aps-environment</key>
+		<string>development</string>
+	]]></Entitlements>
+	
+	
+  </iPhone>
+  
+  <initialWindow>
+    <title>gcm</title>
+    <content>exGcm.swf</content>
+    <visible>true</visible>
+    <!--<autoOrients>false</autoOrients>-->
+    <!--<aspectRatio>landscape</aspectRatio>-->
+    <renderMode>gpu</renderMode>
+    <systemChrome>standard</systemChrome>
+    <aspectRatio>portrait</aspectRatio>
+  </initialWindow>
+  <icon>
+    <image48x48>icons/icon_48.png</image48x48>
+    <image57x57>icons/icon_57.png</image57x57>
+    <image72x72>icons/icon_72.png</image72x72>
+    <image114x114>icons/icon_114.png</image114x114>
+    <image512x512>icons/icon_512.png</image512x512>
+  </icon>
+  <extensions>
+	<!-- And finally, you need to introduce the extensions here. you will need commonDependenciesV3.0.ane or higher -->
+    <extensionID>com.doitflash.air.extensions.dependency</extensionID>
+    <extensionID>com.doitflash.air.extensions.gcm</extensionID>
+  </extensions>
+</application>
