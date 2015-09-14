@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	min-width: 486px;
+}
+
+.padding {
+	padding-right: 40px;
+}
+
+.paddingLR {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.paddingLRB{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.paddingRL {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.paddingR {
+	padding-right: 20px;
+}
+
+.paddingTop {
+	padding-top: 5px;
+}
+
+.marginTop {
+	margin-top: 4px;
+}
+
+.myTextarea {
+    max-width: 210px; max-height: 110px; min-width: 210px; min-height: 110px;
+}
+
+.myForm {
+	 background-color: white; border: none;
+}
+
+.tableFont {
+	font-weight: 900;
+	font-size: 14px;
+}
+
+.tableFont2 {
+	font-weight: bold;
+}
+
+.myTable {
+	margin-bottom: 30px;
+	border: 1px solid #D3D3D3;
+	padding-bottom: 40px;
+	width: auto;
+	height: auto;
+	-webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.myTable2 {
+	margin-bottom: 30px;
+	border: 1px solid #D3D3D3;
+	width: auto;
+	height: auto;
+	-webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.myTable3 {
+	border: 1px solid #D3D3D3;
+	width: auto;
+	height: auto;
+	-webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.myTable4 {
+	margin-top: -18px;
+	width: auto;
+	height: auto;
+}
+
+.tableH {
+	width: 100%;
+	height: 20%;
+}
+
+.tableW {
+	width: 100%;
+}
+
+.tableH2 {
+	width: 10%;
+	height:20%
+}
+
+.btnClose {
+	width: 100px;
+}
+
+.btnDetails {
+	width: 100px;
+}
+
+.spnPadding {
+	font-style: italic;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+	padding: 0px 10px 0px 10px;
+}
+
+.floatR {
+	float: right;
+	margin-top: -5px;
+}
+
+.modalTextarea {
+	width: 95%;
+	height: 120px;
+	resize: none;
+}
+
+.img-circle {
+    border-radius: 0px 30px 60px 30px;
+	border: 1px solid #CCC;
+}
+
+.alert-user {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #cbe5f2;
+}
+
+.alert-block {
+  color: #f89406;
+  border-color: #faae40;
+}
+
+/***Chart 1 CSS***/
+#chart, #chartData {
+  background: #f5f5f5;
+}
+
+#chart {
+  display: block;
+  margin: 0 0 50px 0;
+  float: left;
+  cursor: pointer;
+}
+
+#chartData {
+  width: 200px;
+  margin: 0 40px 0 0;
+  float: right;
+  border-collapse: collapse;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  background-position: 0 -100px;
+}
+
+#chartData th, #chartData td {
+  padding: 0.5em;
+  border: 1px dotted #666;
+  text-align: left;
+}
+
+#chartData th {
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+}
+
+#chartData td {
+  cursor: pointer;
+}
+
+#chartData td.highlight {
+  background: #e8e8e8;
+}
+
+#chartData tr:hover td {
+  background: #f0f0f0;
+}
+
+/***Chart 2 CSS***/
+#chart2, #chartData2 {
+  background: #f5f5f5;
+}
+
+#chart2 {
+  display: block;
+  margin: 0 0 50px 0;
+  float: left;
+  cursor: pointer;
+}
+
+#chartData2 {
+  width: 200px;
+  margin: 0 40px 0 0;
+  float: right;
+  border-collapse: collapse;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  background-position: 0 -100px;
+}
+
+#chartData2 th, #chartData2 td {
+  padding: 0.5em;
+  border: 1px dotted #666;
+  text-align: left;
+}
+
+#chartData2 th {
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+}
+
+#chartData2 td {
+  cursor: pointer;
+}
+
+#chartData2 td.highlight {
+  background: #e8e8e8;
+}
+
+#chartData2 tr:hover td {
+  background: #f0f0f0;
+}
+
+/***Chart 3 CSS***/
+#chart3, #chartData3 {
+  background: #f5f5f5;
+}
+
+#chart3 {
+  display: block;
+  margin: 0 0 50px 0;
+  float: left;
+  cursor: pointer;
+}
+
+#chartData3 {
+  width: 200px;
+  margin: 0 40px 0 0;
+  float: right;
+  border-collapse: collapse;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  background-position: 0 -100px;
+}
+
+#chartData3 th, #chartData3 td {
+  padding: 0.5em;
+  border: 1px dotted #666;
+  text-align: left;
+}
+
+#chartData3 th {
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+}
+
+#chartData3 td {
+  cursor: pointer;
+}
+
+#chartData3 td.highlight {
+  background: #e8e8e8;
+}
+
+#chartData3 tr:hover td {
+  background: #f0f0f0;
+}
+
+/*Responsibility*/
+@media (max-width: 980px) {
+  .myForm, input {
+	 width: 100%;
+	}
+	.nav-collapse .navbar-form,
+	  .nav-collapse .navbar-search {
+		float: right;
+		padding: 9px 15px;
+		margin: 19px 0;
+		width: 90%;
+	  }
+}
+
+@media (max-width: 860px) {
+  .floatR {
+	float: none;
+  }
+}
