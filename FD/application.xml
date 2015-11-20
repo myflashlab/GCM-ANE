@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/18.0">
   <id>com.doitflash.gcm</id>
-  <versionNumber>4.0</versionNumber>
+  <versionNumber>4.9</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>gcm</filename>
-  <name>gcm</name>
+  <name>GCM ANE</name>
   <android>
     <manifestAdditions>
 		<![CDATA[<manifest android:installLocation="auto">
@@ -181,6 +181,6 @@
   <extensions>
 	<!-- And finally, you need to introduce the extensions here. you will need commonDependenciesV3.0.ane or higher -->
     <extensionID>com.doitflash.air.extensions.dependency</extensionID>
-    <extensionID>com.doitflash.air.extensions.gcm</extensionID>
+    <extensionID>com.myflashlab.air.extensions.gcm</extensionID>
   </extensions>
 </application>

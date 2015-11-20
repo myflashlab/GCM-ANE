@@ -1,4 +1,4 @@
-# GCM ANE V4.0 for Android+iOS
+# GCM ANE V4.9 for Android+iOS
 GCM ANE let's you use Google cloud messaging on Android and iOS. we have tried to make the AS3 API identical for both Android and iOS but there are still some differences which you should know about when implementing this extension in your project. I will explain these differences here. 
 
 - The first difference is with how you can obtain the senderId and server API key from Google. we have written a complete step by step tutorial on how you can get those information check here http://www.myappsnippet.com/gcm-android-ios/. once you have your senderID and server API key, implementing them in your project is identical. 
@@ -21,8 +21,8 @@ checkout here for the commercial version: http://myappsnippet.com/gcm-android-io
 
 # USAGE - INITIALIZATION:
 ```actionscript
-import com.doitflash.air.extensions.gcm.Gcm;
-import com.doitflash.air.extensions.gcm.GcmEvent;
+import com.myflashlab.air.extensions.gcm.Gcm;
+import com.myflashlab.air.extensions.gcm.GcmEvent;
 
 var _ex:Gcm = new Gcm(ANDROID_SENDER_ID, IOS_SENDER_ID);
 _ex.addEventListener(GcmEvent.REGISTERED, onRegIdReceived);
@@ -254,7 +254,7 @@ Embedding the ANE:
   <extensions>
 	<!-- And finally, you need to introduce the extensions here. you will need commonDependenciesV3.0.ane or higher -->
     <extensionID>com.doitflash.air.extensions.dependency</extensionID>
-    <extensionID>com.doitflash.air.extensions.gcm</extensionID>
+    <extensionID>com.myflashlab.air.extensions.gcm</extensionID>
   </extensions>
 -->
 ```

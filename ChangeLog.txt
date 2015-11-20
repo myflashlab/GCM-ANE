@@ -15,3 +15,5 @@ Jan 18, 2014	V2.2	>> supports UTF-8 messages from server now also
 						
 ----------------------------------------------------------------------------------------------
 Sep 13, 2015	V4.0	>> Built everything from the ground with the latest tools and libraries, supporting iOS+Android
+
+Nov 03, 2015	V4.9	>> doitflash devs merged into MyFLashLab Team.

@@ -29,8 +29,8 @@ package
 	import flash.utils.ByteArray;
 	import flash.data.EncryptedLocalStore;
 	
-	import com.doitflash.air.extensions.gcm.Gcm;
-	import com.doitflash.air.extensions.gcm.GcmEvent;
+	import com.myflashlab.air.extensions.gcm.Gcm;
+	import com.myflashlab.air.extensions.gcm.GcmEvent;
 	import com.doitflash.mobileProject.commonCpuSrc.DeviceInfo;
 	
 	/**
