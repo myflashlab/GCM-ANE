@@ -173,7 +173,10 @@ package
 		
 		private function init():void
 		{
-			// http://myflashlab.com/showcase/AIR_EXTENSIONS/GCM/demoV4/
+			// required only if you are a member of the club
+			Gcm.clubId = "paypal-address-you-used-to-join-the-club";
+			
+			// http://myflashlabs.com/showcase/AIR_EXTENSIONS/GCM/demoV4/
 			_ex = new Gcm(ANDROID_SENDERID, IOS_SENDERID);
 			_ex.addEventListener(GcmEvent.REGISTERED, onRegIdReceived);
 			_ex.addEventListener(GcmEvent.UNREGISTERED, onUnregistered);
