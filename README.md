@@ -15,7 +15,7 @@ GCM ANE let's you use Google cloud messaging on Android and iOS. we have tried t
 
 checkout here for the commercial version: http://www.myflashlabs.com/product/gcm-ane-adobe-air-native-extension/
 
-![GCM ANE](http://myappsnippet.com/wp-content/uploads/2015/09/google-cloud-messaging-air-extension_preview.jpg)
+![GCM ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-extension-gcm-595x738.jpg)
 
 **NOTICE: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.**
 
