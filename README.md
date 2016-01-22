@@ -1,4 +1,4 @@
-# GCM ANE V4.9.1 for Android+iOS
+# GCM ANE V4.9.2 for Android+iOS
 GCM ANE let's you use Google cloud messaging on Android and iOS. we have tried to make the AS3 API identical for both Android and iOS but there are still some differences which you should know about when implementing this extension in your project. I will explain these differences here. 
 
 - The first difference is with how you can obtain the senderId and server API key from Google. we have written a complete step by step tutorial on how you can get those information check here http://www.myflashlabs.com/product/gcm-ane-adobe-air-native-extension/. once you have your senderID and server API key, implementing them in your project is identical. 
@@ -258,3 +258,31 @@ Embedding the ANE:
   </extensions>
 -->
 ```
+
+# Requirements
+* Android 10 or greater
+* iOS 6.1 or greater
+
+# Changelog
+* Jan 29, 2013	V1.0	>> beginning of the journey!
+
+* Jun 24, 2013	V2.0	>> GCM message includes the following params: id, count, title, msg, info, type, imageUrl
+  *						>> there are 3 types of reactions, decided on the server, when a GCM message arrives: SimpleNotification (default) - BitmapNotification - SimpleDialog
+  *						>> when clicking on the notification, gcm data will be send to the invoke handeler of the app
+  *						>> minor bugs fixed
+
+* Jul 11, 2013	V2.1	>> When packaging in captive mode, local db was not created by java which is now fixed and works fine. tested on Air SDK 3.6 and should be ok with 3.7 or 3.8 also
+
+* Jan 18, 2014	V2.2	>> supports UTF-8 messages from server now also
+  *						>> supports "SimpleLink" gcm type also
+						
+* Sep 13, 2015	>> V4.0:	Built everything from the ground with the latest tools and libraries, supporting iOS+Android
+
+* Nov 03, 2015	>> V4.9:	doitflash devs merged into MyFLashLab Team.
+
+* Dec 20, 2015 	>> V4.9.1: 	minor bug fixes
+
+* Jan 20, 2016 	>> V4.9.2: 	bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem.
+  *							This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater.
+  *							https://forums.adobe.com/thread/2055508
+  *							https://forums.adobe.com/message/8294948
