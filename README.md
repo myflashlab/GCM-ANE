@@ -266,10 +266,10 @@ we have tried to make the AS3 API identical for both Android and iOS but there a
 - The last different between gcm extension for Android and iOS is with badges. on the iOS side, you can specify a badge number coming with your gcm message and as soon as the gcm message is delivered to your device, this badge number can be updated (you can update the badge manually from AS3 too). we don't have a similar thing on the Android side unfortunaitly. 
 
 # Tutorials
-[How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)
-[How to obtain gcm senderID + server API key for Android?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-senderid-server-api-key-android/)
-[How to obtain gcm senderID + server API key for iOS?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-senderid-server-api-key-ios/)
-[How to setup the Air xml manifest ready to work with gcm extension?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-manifest-setup/)
+[How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
+[How to obtain gcm senderID + server API key for Android?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-senderid-server-api-key-android/)  
+[How to obtain gcm senderID + server API key for iOS?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-senderid-server-api-key-ios/)  
+[How to setup the Air xml manifest ready to work with gcm extension?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-manifest-setup/)  
 
 
 # Changelog
