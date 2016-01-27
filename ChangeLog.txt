@@ -1,26 +1,36 @@
 GCM Adobe Air Native Extension
 
+*Jan 20, 2016 - V4.9.2*
+* bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem. This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater. https://forums.adobe.com/thread/2055508 https://forums.adobe.com/message/8294948
 
-Jan 29, 2013	V1.0	>> beginning of the journey!
 
-Jun 24, 2013	V2.0	>> GCM message includes the following params: id, count, title, msg, info, type, imageUrl
-						>> there are 3 types of reactions, decided on the server, when a GCM message arrives: SimpleNotification (default) - BitmapNotification - SimpleDialog
-						>> when clicking on the notification, gcm data will be send to the invoke handeler of the app
-						>> minor bugs fixed
+*Dec 20, 2015 - V4.9.1*
+* minor bug fixes
 
-Jul 11, 2013	V2.1	>> When packaging in captive mode, local db was not created by java which is now fixed and works fine. tested on Air SDK 3.6 and should be ok with 3.7 or 3.8 also
 
-Jan 18, 2014	V2.2	>> supports UTF-8 messages from server now also
-						>> supports "SimpleLink" gcm type also
-						
-----------------------------------------------------------------------------------------------
-Sep 13, 2015	>> V4.0:	Built everything from the ground with the latest tools and libraries, supporting iOS+Android
+*Nov 03, 2015 - V4.9*
+* doitflash devs merged into MyFLashLab Team
 
-Nov 03, 2015	>> V4.9:	doitflash devs merged into MyFLashLab Team.
 
-Dec 20, 2015 	>> V4.9.1: 	minor bug fixes
+*Sep 13, 2015 - V4.0*
+* Built everything from the ground with the latest tools and libraries, supporting iOS+Android
 
-Jan 20, 2016 	>> V4.9.2: 	bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem.
-							This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater.
-							https://forums.adobe.com/thread/2055508
-							https://forums.adobe.com/message/8294948
+
+*Jan 18, 2014 - V2.2*
+* supports UTF-8 messages from server now also
+* supports "SimpleLink" gcm type also
+
+
+*Jul 11, 2013 - V2.1*
+* When packaging in captive mode, local db was not created by java which is now fixed and works fine. tested on Air SDK 3.6 and should be ok with 3.7 or 3.8 also
+
+
+*Jun 24, 2013 - V2.0*
+* GCM message includes the following params: id, count, title, msg, info, type, imageUrl
+* there are 3 types of reactions, decided on the server, when a GCM message arrives: SimpleNotification (default) - BitmapNotification - SimpleDialog
+* when clicking on the notification, gcm data will be send to the invoke handeler of the app
+* minor bugs fixed
+
+
+*Jan 29, 2013 - V1.0*
+* beginning of the journey!

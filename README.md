@@ -1,25 +1,7 @@
 # GCM ANE V4.9.2 for Android+iOS
-GCM ANE let's you use Google cloud messaging on Android and iOS. we have tried to make the AS3 API identical for both Android and iOS but there are still some differences which you should know about when implementing this extension in your project. I will explain these differences here. 
+GCM ANE let's you use Google cloud messaging on Android and iOS to send push notifications (remote notifications) to your app users.
 
-- The first difference is with how you can obtain the senderId and server API key from Google. we have written a complete step by step tutorial on how you can get those information check here http://www.myflashlabs.com/product/gcm-ane-adobe-air-native-extension/. once you have your senderID and server API key, implementing them in your project is identical. 
-
-- The second difference is with the gcm message that your server will send to google servers. in simple words, you need to orgenize the gcm message in a json format and send the string to google gcm servers. check here http://myflashlabs.com/showcase/AIR_EXTENSIONS/GCM/demoV4/ and choose the device type from the dropdown menu. you will see a different json string for Android and iOS. I strongly recommand you to study the json strings and see what options are available to you if you are going to send gcm to an Android device or an iOS device. On the iOS side, we are limited with apple rules. I'm sorry to tell you that you can't imagine too much when working with GCM on iOS. To learn more about what parameters are supported on the iOS side, study the "notification-payload-support" section on this page http://developers.google.com/cloud-messaging/http-server-ref#notification-payload-support. But on the Android side, you can do almost ANYTHING! 
-
-    - Let me put it this way, **GCM on iOS:** is just a way for you to notify your users that something new is available for them so they can open your app and see what it is. But **GCM on Android:** is a way for you to remotly call on your app and do whatever you like with it! for example, maybe you need to update your app database with some very important information and you want to do this without engaging the user! you can simply send a gcm message to your app and trigger the function you like! Considering that GCM is so flexable on the Android side, we have customized the GCM payload Json message to what you can see here http://myflashlabs.com/showcase/AIR_EXTENSIONS/GCM/demoV4/. This format will allow us to add new tasks easily. these tasks must happen in native Java and not in flash. so, we have notification only at the moment but if you need background processes on the Android side, you can always contact us and put your order. Our Java dev team is ready to hear your requirements and we'll be happy to help you make them happen as fast as possible. 
-
-- The third and the most difference between GCM in Android and iOS is with how much control you have over your gcm message. I explained a little about these controles above but let's take the notification as an example. On the Android side, you can fully control how your notification should appear. you can customize the notification icon, sound, content and many more details. we made sure we are supporting all the methods that native Android supports. small details like the notification LED color! While implementing all the latest notification features in the latest Android OS versions, we also made sure that everything will work fine on older Android versions begining from Android 2.3.6 
-
-    - When sending a GCM on Android, you can specify an execution time. we are calling these gcm messages on Android as Tasks. so if you are on Android, you can always check which tasks are still in queue so maybe you wish to cancel their execution... you can also manually cancel a notification on Android. **on iOS side, gcm notifications will be cleaned automatically when you enter the application**.
-	
-- The last different between gcm extension for Android and iOS is with badges. on the iOS side, you can specify a badge number coming with your gcm message and as soon as the gcm message is delivered to your device, this badge number can be updated (you can update the badge manually from AS3 too). we don't have a similar thing on the Android side unfortunaitly. 
-
-checkout here for the commercial version: http://www.myflashlabs.com/product/gcm-ane-adobe-air-native-extension/
-
-![GCM ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-extension-gcm-595x738.jpg)
-
-**NOTICE: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.**
-
-# USAGE - INITIALIZATION:
+# Air Usage
 ```actionscript
 import com.myflashlab.air.extensions.gcm.Gcm;
 import com.myflashlab.air.extensions.gcm.GcmEvent;
@@ -56,7 +38,7 @@ function onMessage(e:GcmEvent):void
 }
 ```
 
-# USAGE - InvokeEvent.INVOKE
+# Air Usage - InvokeEvent.INVOKE
 ```actionscript
 NativeApplication.nativeApplication.addEventListener(InvokeEvent.INVOKE, onInvoke);
 
@@ -260,29 +242,68 @@ Embedding the ANE:
 ```
 
 # Requirements
-* Android 10 or greater
-* iOS 6.1 or greater
+* Android 10 or higher
+* iOS 6.1 or higher
+
+# Commercial Version
+http://www.myflashlabs.com/product/gcm-ane-adobe-air-native-extension/
+
+![GCM ANE](http://www.myflashlabs.com/wp-content/uploads/2015/11/product_adobe-air-ane-extension-gcm-595x738.jpg)
+
+# Tech Details
+we have tried to make the AS3 API identical for both Android and iOS but there are still some differences which you should know about when implementing this extension in your project. I will explain these differences here. 
+
+- The first difference is with how you can obtain the senderId and server API key from Google. we have written a complete step by step tutorial on how you can get those information check here http://www.myflashlabs.com/product/gcm-ane-adobe-air-native-extension/. once you have your senderID and server API key, implementing them in your project is identical. 
+
+- The second difference is with the gcm message that your server will send to google servers. in simple words, you need to orgenize the gcm message in a json format and send the string to google gcm servers. check here http://myflashlabs.com/showcase/AIR_EXTENSIONS/GCM/demoV4/ and choose the device type from the dropdown menu. you will see a different json string for Android and iOS. I strongly recommand you to study the json strings and see what options are available to you if you are going to send gcm to an Android device or an iOS device. On the iOS side, we are limited with apple rules. I'm sorry to tell you that you can't imagine too much when working with GCM on iOS. To learn more about what parameters are supported on the iOS side, study the "notification-payload-support" section on this page http://developers.google.com/cloud-messaging/http-server-ref#notification-payload-support. But on the Android side, you can do almost ANYTHING! 
+
+    - Let me put it this way, **GCM on iOS:** is just a way for you to notify your users that something new is available for them so they can open your app and see what it is. But **GCM on Android:** is a way for you to remotly call on your app and do whatever you like with it! for example, maybe you need to update your app database with some very important information and you want to do this without engaging the user! you can simply send a gcm message to your app and trigger the function you like! Considering that GCM is so flexable on the Android side, we have customized the GCM payload Json message to what you can see here http://myflashlabs.com/showcase/AIR_EXTENSIONS/GCM/demoV4/. This format will allow us to add new tasks easily. these tasks must happen in native Java and not in flash. so, we have notification only at the moment but if you need background processes on the Android side, you can always contact us and put your order. Our Java dev team is ready to hear your requirements and we'll be happy to help you make them happen as fast as possible. 
+
+- The third and the most difference between GCM in Android and iOS is with how much control you have over your gcm message. I explained a little about these controles above but let's take the notification as an example. On the Android side, you can fully control how your notification should appear. you can customize the notification icon, sound, content and many more details. we made sure we are supporting all the methods that native Android supports. small details like the notification LED color! While implementing all the latest notification features in the latest Android OS versions, we also made sure that everything will work fine on older Android versions begining from Android 2.3.6 
+
+    - When sending a GCM on Android, you can specify an execution time. we are calling these gcm messages on Android as Tasks. so if you are on Android, you can always check which tasks are still in queue so maybe you wish to cancel their execution... you can also manually cancel a notification on Android. **on iOS side, gcm notifications will be cleaned automatically when you enter the application**.
+	
+- The last different between gcm extension for Android and iOS is with badges. on the iOS side, you can specify a badge number coming with your gcm message and as soon as the gcm message is delivered to your device, this badge number can be updated (you can update the badge manually from AS3 too). we don't have a similar thing on the Android side unfortunaitly. 
+
+# Tutorials
+[How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)
+[How to obtain gcm senderID + server API key for Android?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-senderid-server-api-key-android/)
+[How to obtain gcm senderID + server API key for iOS?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-senderid-server-api-key-ios/)
+[How to setup the Air xml manifest ready to work with gcm extension?](http://www.myflashlabs.com/adobe-air-gcm-tutorial-manifest-setup/)
+
 
 # Changelog
-* Jan 29, 2013	V1.0	>> beginning of the journey!
+*Jan 20, 2016 - V4.9.2*
+* bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem. This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater. https://forums.adobe.com/thread/2055508 https://forums.adobe.com/message/8294948
 
-* Jun 24, 2013	V2.0	>> GCM message includes the following params: id, count, title, msg, info, type, imageUrl
-  *						>> there are 3 types of reactions, decided on the server, when a GCM message arrives: SimpleNotification (default) - BitmapNotification - SimpleDialog
-  *						>> when clicking on the notification, gcm data will be send to the invoke handeler of the app
-  *						>> minor bugs fixed
 
-* Jul 11, 2013	V2.1	>> When packaging in captive mode, local db was not created by java which is now fixed and works fine. tested on Air SDK 3.6 and should be ok with 3.7 or 3.8 also
+*Dec 20, 2015 - V4.9.1*
+* minor bug fixes
 
-* Jan 18, 2014	V2.2	>> supports UTF-8 messages from server now also
-  *						>> supports "SimpleLink" gcm type also
-						
-* Sep 13, 2015	>> V4.0:	Built everything from the ground with the latest tools and libraries, supporting iOS+Android
 
-* Nov 03, 2015	>> V4.9:	doitflash devs merged into MyFLashLab Team.
+*Nov 03, 2015 - V4.9*
+* doitflash devs merged into MyFLashLab Team
 
-* Dec 20, 2015 	>> V4.9.1: 	minor bug fixes
 
-* Jan 20, 2016 	>> V4.9.2: 	bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem.
-  *							This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater.
-  *							https://forums.adobe.com/thread/2055508
-  *							https://forums.adobe.com/message/8294948
+*Sep 13, 2015 - V4.0*
+* Built everything from the ground with the latest tools and libraries, supporting iOS+Android
+
+
+*Jan 18, 2014 - V2.2*
+* supports UTF-8 messages from server now also
+* supports "SimpleLink" gcm type also
+
+
+*Jul 11, 2013 - V2.1*
+* When packaging in captive mode, local db was not created by java which is now fixed and works fine. tested on Air SDK 3.6 and should be ok with 3.7 or 3.8 also
+
+
+*Jun 24, 2013 - V2.0*
+* GCM message includes the following params: id, count, title, msg, info, type, imageUrl
+* there are 3 types of reactions, decided on the server, when a GCM message arrives: SimpleNotification (default) - BitmapNotification - SimpleDialog
+* when clicking on the notification, gcm data will be send to the invoke handeler of the app
+* minor bugs fixed
+
+
+*Jan 29, 2013 - V1.0*
+* beginning of the journey!
