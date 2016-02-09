@@ -176,6 +176,9 @@ package
 			// required only if you are a member of the club
 			Gcm.clubId = "paypal-address-you-used-to-join-the-club";
 			
+			// set this to false when you are using your production certificate. (this property must be set before you initialize the extension with new Gcm(...)
+			Gcm.isSandbox = true;
+			
 			// http://myflashlabs.com/showcase/AIR_EXTENSIONS/GCM/demoV4/
 			_ex = new Gcm(ANDROID_SENDERID, IOS_SENDERID);
 			_ex.addEventListener(GcmEvent.REGISTERED, onRegIdReceived);

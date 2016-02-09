@@ -1,10 +1,13 @@
-# GCM ANE V4.9.2 for Android+iOS
+# GCM ANE V4.9.3 for Android+iOS
 GCM ANE let's you use Google cloud messaging on Android and iOS to send push notifications (remote notifications) to your app users.
 
 # Air Usage
 ```actionscript
 import com.myflashlab.air.extensions.gcm.Gcm;
 import com.myflashlab.air.extensions.gcm.GcmEvent;
+
+// set this to false when you are using your production certificate. (this property must be set before you initialize the extension with new Gcm(...)
+Gcm.isSandbox = true;
 
 var _ex:Gcm = new Gcm(ANDROID_SENDER_ID, IOS_SENDER_ID);
 _ex.addEventListener(GcmEvent.REGISTERED, onRegIdReceived);
@@ -273,6 +276,10 @@ we have tried to make the AS3 API identical for both Android and iOS but there a
 
 
 # Changelog
+*Feb 09, 2016 - V4.9.3*
+* added the missing Gcm.isSandbox property.
+
+
 *Jan 20, 2016 - V4.9.2*
 * bypassing xCode 7.2 bug causing iOS conflict when compiling with AirSDK 20 without waiting on Adobe or Apple to fix the problem. This is a must have upgrade for your app to make sure you can compile multiple ANEs in your project with AirSDK 20 or greater. https://forums.adobe.com/thread/2055508 https://forums.adobe.com/message/8294948
 
