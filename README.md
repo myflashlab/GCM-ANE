@@ -245,7 +245,7 @@ Embedding the ANE:
 ```
 
 # Requirements
-* This ANE is dependent on **androidSupport.ane** and **googlePlayServices.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
+* This ANE is dependent on **androidSupport.ane** and **googlePlayServices_gcm.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
 * Android 10 or higher
 * iOS 6.1 or higher
 
