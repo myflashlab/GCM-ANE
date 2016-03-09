@@ -237,8 +237,8 @@ FOR iOS:
 Embedding the ANE:
 -->
   <extensions>
-	<!-- And finally, you need to introduce the extensions here. you will need commonDependenciesV3.0.ane or higher -->
-    <extensionID>com.doitflash.air.extensions.dependency</extensionID>
+	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.gcm</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
     <extensionID>com.myflashlab.air.extensions.gcm</extensionID>
   </extensions>
 -->
