@@ -220,14 +220,20 @@ FOR iOS:
 		<array>
 			<string>M8DXV5X5LV.*</string>		
 		</array>
+		
+		<!-- set to 'true' when debugging your app and set to 'false' when building for adhoc or distribution -->
 		<key>get-task-allow</key>
 		<true/>
+		
 		<key>application-identifier</key>
 		<string>M8DXV5X5LV.com.doitflash.gcm</string>
 		<key>com.apple.developer.team-identifier</key>
 		<string>M8DXV5X5LV</string>
+		
+		<!-- set to 'development' when debugging your app and set to 'production' when building for adhoc or distribution -->
 		<key>aps-environment</key>
 		<string>development</string>
+		
 	</Entitlements>
 	
 	
