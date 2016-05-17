@@ -1,6 +1,9 @@
 # GCM ANE V4.9.3 for Android+iOS
 GCM ANE let's you use Google cloud messaging on Android and iOS to send push notifications (remote notifications) to your app users.
 
+# asdoc
+[find the latest asdoc for this ANE here.](http://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/gcm/package-detail.html)
+
 # Air Usage
 ```actionscript
 import com.myflashlab.air.extensions.gcm.Gcm;
