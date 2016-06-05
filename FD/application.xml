@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/20.0">
   <id>com.doitflash.gcm</id>
-  <versionNumber>4.9.3</versionNumber>
+  <versionNumber>5.0.0</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>gcm</filename>
   <name>gcm ANE</name>
@@ -192,6 +192,8 @@
   </icon>
   <extensions>
     <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.gcm</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.iid</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
     <extensionID>com.myflashlab.air.extensions.gcm</extensionID>
   </extensions>

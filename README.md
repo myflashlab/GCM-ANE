@@ -1,4 +1,4 @@
-# GCM ANE V4.9.3 for Android+iOS
+# GCM ANE V5.0.0 for Android+iOS
 GCM ANE let's you use Google cloud messaging on Android and iOS to send push notifications (remote notifications) to your app users.
 
 # asdoc
@@ -247,6 +247,8 @@ Embedding the ANE:
 -->
   <extensions>
 	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.gcm</extensionID>
+	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.iid</extensionID>
+	<extensionID>com.myflashlab.air.extensions.dependency.googlePlayServices.basement</extensionID>
     <extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
     <extensionID>com.myflashlab.air.extensions.gcm</extensionID>
   </extensions>
@@ -254,7 +256,7 @@ Embedding the ANE:
 ```
 
 # Requirements
-* This ANE is dependent on **androidSupport.ane** and **googlePlayServices_gcm.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
+* This ANE is dependent on **androidSupport.ane**, **googlePlayServices_basement.ane**, **googlePlayServices_gcm.ane** and **googlePlayServices_iid.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
 * Android 10 or higher
 * iOS 6.1 or higher
 
@@ -286,6 +288,12 @@ we have tried to make the AS3 API identical for both Android and iOS but there a
 
 
 # Changelog
+*Jun 05, 2016 - V5.0.0*
+* Updated Games Services to V9.0.1
+* You must add ```googlePlayServices_basement.ane``` and ```googlePlayServices_iid.ane``` to your project also.
+* You must update ```googlePlayServices_gcm.ane``` to V9.0.1
+
+
 *Feb 09, 2016 - V4.9.3*
 * added the missing Gcm.isSandbox property.
 

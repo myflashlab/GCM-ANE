@@ -8,11 +8,11 @@
     <movie fps="30" />
     <movie width="480" />
     <movie height="762" />
-    <movie version="19" />
+    <movie version="21" />
     <movie minorVersion="0" />
     <movie platform="AIR Mobile" />
     <movie background="#FFFFFF" />
-    <movie preferredSDK="Flex 4.6.0, AIR 20.0;4.6.0, 20.0;" />
+    <movie preferredSDK="Flex 4.6.0, AIR 22.0;4.6.0, 22.0;" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
@@ -54,10 +54,13 @@
   <!-- SWC Libraries -->
   <libraryPaths>
     <element path="lib\greensock.swc" />
-    <element path="lib\commonDependenciesV3.0.ane" />
     <element path="lib\barcodeExtension.ane" />
     <element path="lib\downloadManager.ane" />
     <element path="lib\gcm.ane" />
+    <element path="lib\androidSupport.ane" />
+    <element path="lib\googlePlayServices_gcm.ane" />
+    <element path="lib\googlePlayServices_iid.ane" />
+    <element path="lib\googlePlayServices_basement.ane" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
