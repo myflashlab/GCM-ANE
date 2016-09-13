@@ -1,8 +1,12 @@
 GCM Adobe Air Native Extension
 
+*Sep 13, 2016 - V5.0.1*
+* Fixed [this issue](https://github.com/myflashlab/GCM-ANE/issues/25).
+
+
 *Jun 05, 2016 - V5.0.0*
 * Updated Games Services to V9.0.1
-* You must add ```googlePlayServices_basement.ane``` and ```googlePlayServices_iid.ane``` to your project also.
+* You must add ```googlePlayServices_basement.ane``` and ```googlePlayServices_iid.ane``` to your project in addition to the older ones.
 * You must update ```googlePlayServices_gcm.ane``` to V9.0.1
 
 

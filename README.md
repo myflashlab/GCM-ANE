@@ -1,4 +1,4 @@
-# GCM ANE V5.0.0 for Android+iOS
+# GCM ANE V5.0.1 for Android+iOS
 GCM ANE let's you use Google cloud messaging on Android and iOS to send push notifications (remote notifications) to your app users.
 
 # asdoc
@@ -288,9 +288,13 @@ we have tried to make the AS3 API identical for both Android and iOS but there a
 
 
 # Changelog
+*Sep 13, 2016 - V5.0.1*
+* Fixed [this issue](https://github.com/myflashlab/GCM-ANE/issues/25).
+
+
 *Jun 05, 2016 - V5.0.0*
 * Updated Games Services to V9.0.1
-* You must add ```googlePlayServices_basement.ane``` and ```googlePlayServices_iid.ane``` to your project also.
+* You must add ```googlePlayServices_basement.ane``` and ```googlePlayServices_iid.ane``` to your project in addition to the older ones.
 * You must update ```googlePlayServices_gcm.ane``` to V9.0.1
 
 
