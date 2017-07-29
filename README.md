@@ -1,3 +1,5 @@
+**NOTICE: This ANE is no longer managed. Instead you can use the [Firebase FCM ANE](https://github.com/myflashlab/Firebase-ANE). We are leaving this repository as it is only for your reference.**
+
 # GCM ANE V5.0.1 for Android+iOS
 GCM ANE let's you use Google cloud messaging on Android and iOS to send push notifications (remote notifications) to your app users.
 
